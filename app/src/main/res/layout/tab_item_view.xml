@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp">
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:focusable="false"
+        android:scaleType="center"
+        android:src="@drawable/widget_bar_find_over" />
+
+
+</RelativeLayout>

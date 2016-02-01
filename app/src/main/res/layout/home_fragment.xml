@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/eighteen" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/lin_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/lin_view">
+
+                <ImageView
+                    android:id="@+id/search_IV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="center"
+                    android:src="@drawable/search" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/lin_view">
+
+                <ImageView
+                    android:id="@+id/ZXing_IV"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="center"
+                    android:src="@drawable/zxing" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/main_color" />
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp8"
+        android:layout_marginLeft="@dimen/dp8"
+        android:layout_marginRight="@dimen/dp8"
+        android:layout_marginTop="@dimen/dp8"
+        android:horizontalSpacing="@dimen/dp15"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/dp8"
+         />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/no_user"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zxing_bg">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp50"
+            android:id="@+id/capture_crop_layout"
+            android:layout_width="249dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/zxing_kuang"
+            android:contentDescription="@string/app_name" >
+
+            <ImageView
+                android:id="@+id/capture_scan_line"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/scan_line"
+                android:contentDescription="@string/app_name" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

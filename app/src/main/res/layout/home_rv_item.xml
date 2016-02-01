@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/rc_item_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/video_pay_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pay_ok" />
+
+            <TextView
+                android:id="@+id/video_Name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/video_pay_state"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="老山羊3D造型"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16" />
+
+            <TextView
+                android:id="@+id/video_suggest"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/video_Name"
+                android:layout_marginTop="@dimen/dp5"
+                android:layout_toRightOf="@id/video_pay_state"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="小山羊造型"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14" />
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="@dimen/dp5">
+
+            <ImageView
+                android:id="@+id/video_cover"
+                android:layout_width="@dimen/video_image_width"
+                android:layout_height="@dimen/video_image_hight"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/video_cover" />
+
+            <ImageView
+                android:id="@+id/video_download_state"
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_gravity="top|center"
+                android:src="@drawable/download_ok" />
+
+            <com.zhilianxinke.holographic.common.circleprogressbarlib.CircleProgressBar
+                android:id="@+id/circleProgressBar"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_gravity="top|center"
+                android:visibility="gone"
+                app:cpbBackgroundColor="#fff"
+                app:cpbForegroundColor="@color/main_color"
+                app:cpbProgressTextColor="@color/main_color"
+                app:cpbStrokeWidth="5" />
+
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

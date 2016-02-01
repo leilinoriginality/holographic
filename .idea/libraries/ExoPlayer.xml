@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ExoPlayer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/ExoPlayer.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

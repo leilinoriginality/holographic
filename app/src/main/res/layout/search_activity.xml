@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@null"
+            android:text="取  消" />
+
+        <RelativeLayout
+            android:id="@+id/search_Rl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/cancel">
+
+            <EditText
+                android:id="@+id/input_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext"
+                android:gravity="center_vertical"
+                android:hint="请输入搜索信息"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingBottom="3dp"
+                android:paddingLeft="35dp"
+                android:paddingTop="3dp"
+                android:textCursorDrawable="@null"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/syncOperatorImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/input_edit"
+                android:layout_alignLeft="@+id/input_edit"
+                android:layout_alignTop="@+id/input_edit"
+                android:src="@drawable/iconfont_sousu" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:background="#c4c9c2"
+            android:horizontalSpacing="5dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp" />
+
+        <ListView
+            android:id="@+id/auto_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/noData"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/no_data"
+        android:visibility="gone" />
+
+
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/write"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/user_por"
+        android:background="@color/black_user"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="我的"
+            android:textColor="@color/write"
+            android:textSize="@dimen/eighteen" />
+
+        <com.zhilianxinke.holographic.module.user.widget.CircularImage
+            android:id="@+id/cover_user_photo"
+            android:layout_width="75.0dip"
+            android:layout_height="75.0dip"
+            android:layout_centerInParent="true"
+            android:src="@drawable/video_cover" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/cover_user_photo"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/lin_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/line" />
+
+            <RelativeLayout
+                android:id="@+id/loading"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/lin_view">
+
+                <TextView
+                    android:id="@+id/login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="登录"
+                    android:textColor="@color/write"
+                    android:textSize="@dimen/sixteen" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/register"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/lin_view">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="注册"
+                    android:textColor="@color/write"
+                    android:textSize="@dimen/sixteen" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/user_por"
+        android:layout_below="@id/title"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="3dp"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/write" />
+
+        <RelativeLayout
+            android:id="@+id/clear_cache"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_toLeftOf="@id/line"
+            android:background="@color/main_color">
+
+            <TextView
+                android:id="@+id/cache_size_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="清除缓存"
+                android:textColor="@color/write"
+                android:textSize="@dimen/sixteen" />
+
+            <TextView
+                android:id="@+id/cache_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cache_size_text"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/write"
+                android:textSize="@dimen/fourteen" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/update_upgrade"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/line"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/version_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="版本升级"
+                android:textColor="@color/write"
+                android:textSize="@dimen/sixteen" />
+
+            <TextView
+                android:id="@+id/version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/version_text"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/write"
+                android:textSize="@dimen/fourteen" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/company"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

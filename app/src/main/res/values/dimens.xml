@@ -1,0 +1,47 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="twenty_sp">20sp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="eighteen">18sp</dimen>
+    <dimen name="sixteen">16sp</dimen>
+    <dimen name="fourteen">13sp</dimen>
+
+    <dimen name="ui_10_dip">10dip</dimen>
+    <dimen name="spot_size">6dp</dimen>
+    <dimen name="title_margin">10dp</dimen>
+    <dimen name="progress_margin">24dp</dimen>
+    <dimen name="progress_width">250dp</dimen>
+    <dimen name="user_por">180dp</dimen>
+
+    <dimen name="dp100">29.6dp</dimen>
+    <dimen name="dp150">44.4dp</dimen>
+    <dimen name="dp450">133.3dp</dimen>
+    <dimen name="dp320">94.8dp</dimen>
+    <dimen name="sp179">53.7sp</dimen>
+    <dimen name="dp60n">-17.8dp</dimen>
+    <dimen name="dp179">53dp</dimen>
+    <dimen name="dp60">17.8dp</dimen>
+    <dimen name="dp900">266.7dp</dimen>
+    <dimen name="dp130">38.5dp</dimen>
+    <dimen name="dp45">13.3dp</dimen>
+    <dimen name="dp120">35.6dp</dimen>
+    <dimen name="sp45">13.5sp</dimen>
+    <dimen name="dp55">16.3dp</dimen>
+    <dimen name="dp555">164.4dp</dimen>
+    <dimen name="dp300">88.9dp</dimen>
+    <dimen name="dp20">5.9dp</dimen>
+    <dimen name="sp40">12sp</dimen>
+    <dimen name="dp1">0.3dp</dimen>
+    <dimen name="dp170">50.4dp</dimen>
+    <dimen name="dp2">0.6dp</dimen>
+
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="footer_height">90dp</dimen>
+    <dimen name="footer_padding">10dp</dimen>
+
+    <dimen name="subtitle_font_size">24sp</dimen>
+    <dimen name="subtitle_setting_font">17dip</dimen>
+    <dimen name="subtitle_setting_width">277.5dip</dimen>
+    <dimen name="subtitle_setting_height">190dip</dimen>
+</resources>
