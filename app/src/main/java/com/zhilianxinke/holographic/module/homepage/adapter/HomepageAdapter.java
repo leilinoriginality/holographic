@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.activeandroid.query.Select;
 import com.lidroid.xutils.BitmapUtils;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.exception.HttpException;
@@ -96,11 +97,23 @@ public class HomepageAdapter extends BaseAdapter {
             holder.videopaystate.setVisibility(View.VISIBLE);
             holder.videopaystate.setImageResource(R.drawable.pay_ok);
         }
-        if (videoInfo.getIsDownload()) {
-            holder.videodownloadstate.setImageResource(R.drawable.download_ok);
-        } else {
-            holder.videodownloadstate.setImageResource(R.drawable.download_no);
+
+        boolean isDownLoad = videoInfo.getIsDownload();
+        if (!videoInfo.getIsDownload()) {
+            //校对本地状态
+            AppVideoInfo appVideoInfo = new Select().from(AppVideoInfo.class).where("uuid = ?", videoInfo.getUuid()).executeSingle();
+            if (appVideoInfo != null) {
+                isDownLoad = appVideoInfo.getIsDownload();
+            }
         }
+//            holder.videodownloadstate.setImageResource(R.drawable.download_ok);
+//        } else {
+//
+//
+//            holder.videodownloadstate.setImageResource(R.drawable.download_no);
+//        }
+        int downloadResourceId = isDownLoad?R.drawable.download_ok:R.drawable.download_no;
+        holder.videodownloadstate.setImageResource(downloadResourceId);
         new BitmapUtils(context).display(holder.videocover, videoInfo.getPortrait());
         return view;
     }
